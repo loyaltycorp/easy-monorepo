@@ -12,4 +12,4 @@ jobs:
             -   uses: eonx-com/actions-checkout@v2
 
             -   run: |
-                    docker run --rm -v $(pwd):/project rector/rector:0.8.34-php7.4 process --config rector-ci.php
+                    docker run --rm -v $(pwd):/project rector/rector:latest process --config rector-ci.php
