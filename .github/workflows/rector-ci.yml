@@ -21,4 +21,4 @@ jobs:
             -   run: cd monorepo; composer install
 
             -   run: composer req rector/rector:0.8.34
-            -   run: vendor/bin/rector --version
+            -   run: vendor/bin/rector process --ansi --config monorepo/rector-ci.php
