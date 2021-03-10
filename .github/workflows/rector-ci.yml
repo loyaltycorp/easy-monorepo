@@ -20,5 +20,5 @@ jobs:
 
             -   run: cd monorepo; composer install
 
-            -   run: ls -la
-            -   run: ls -la monorepo
+            -   run: composer req rector/rector:0.8.34
+            -   run: vendor/bin/rector --version
