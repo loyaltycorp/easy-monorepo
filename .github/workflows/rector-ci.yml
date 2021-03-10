@@ -11,5 +11,6 @@ jobs:
         steps:
             -   uses: eonx-com/actions-checkout@v2
 
-            -   run: |
-                    docker run --rm -v $(pwd):/project rector/rector:latest process --config rector-ci.php
+            -   run: composer remove rector/rector
+            -   run: composer req rector/rector:0.8.34
+            -   run: composer check-rector
