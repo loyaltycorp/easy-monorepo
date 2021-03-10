@@ -13,4 +13,12 @@ jobs:
                 with:
                     path: 'monorepo'
 
+            -   uses: eonx-com/actions-setup-php@v2
+                with:
+                    php-version: '7.4'
+                    coverage: 'none'
+
+            -   run: cd monorepo; composer install
+
             -   run: ls -la
+            -   run: ls -la monorepo
