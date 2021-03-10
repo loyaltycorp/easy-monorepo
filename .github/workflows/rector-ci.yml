@@ -1,0 +1,16 @@
+name: rector-ci
+
+on:
+    push:
+        branches:
+            - feature/rector-outside-of-repo
+
+jobs:
+    run_rector:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: eonx-com/actions-checkout@v2
+                with:
+                    path: 'monorepo'
+
+            -   run: ls -la
